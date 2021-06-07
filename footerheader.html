@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UFT-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/kendo.common.min.css" />
+        <link rel="stylesheet" href="css/kendo.default.min.css" />
+        <link rel="stylesheet" href="css/kendo.default.mobile.min.css" />
+        <link rel="stylesheet" href="css/footerheader.css" />
+        <script src="js/jquery.min.js"></script> 
+        <script src="js/kendo.all.min.js"></script>
+    </head>
+    <body>
+        <header>
+        <nav>
+            <label class="logo">B1 SOFT</label>
+            <div class="box">
+                <input type="text" name="search" placeholder="Buscar cursos" class="src" autocomplete="off">
+            </div>
+            <div id="perfil">
+                <div class="demo-section k-content">
+                    <ul id="panelbar-images"></ul>
+                </div>
+                <script>
+                    $("#panelbar-images").kendoPanelBar({
+                        dataSource: [
+                            {
+                                text: "USUARIO", imageUrl: "../content/shared/icons/sports/baseball.png",
+                                items: [
+                                    { text: "Mi perfil", imageUrl: "../content/shared/icons/16/star.png"},
+                                    { text: "Mis cursos", imageUrl: "../content/shared/icons/16/photo.png" }
+                                ]
+                            },
+                        ]
+                    });
+                </script>
+            </div>
+        </nav>
+    </header>
+        <main>
+            <p>HOLA</p>
+            <p>HOLA</p>
+            <p>HOLA</p>
+            <p>HOLA</p>
+            <p>HOLA</p>
+            <p>HOLA</p>
+            <p>HOLA</p>
+            <p>HOLA</p> 
+            <p>HOLA</p>
+            <p>HOLA</p>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <h1>Aviso de privacidad</h1>
+                <h2>Terminos y condiciones</h2>
+                <ul class="socials">
+                   <li><img src="icon/facebook.png"></li> 
+                   <li><img src="icon/twitter.png"></li>
+                   <li><img src="icon/instagram.png"></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2021 E-Learning, designed by <span>B1 SOFT</span></p>
+            </div>
+        </footer>
+
+    </body>
+</html>
