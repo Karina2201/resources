@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nuevo Curso</title>
+    <link rel="stylesheet" href="css/kendo.common.min.css" />
+    <link rel="stylesheet" href="css/kendo.default.min.css" />
+    <link rel="stylesheet" href="css/kendo.default.mobile.min.css" />
+    <link rel="stylesheet" href="css/nuevocurso.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="Titulo">
+            <h1>Nuevo Curso</h1>
+        </div>
+        <div id="FormEleccion">
+            <div id="example">
+                <div class="demo-section k-content wide">
+                    <div>
+                        <form id="Formulario">
+                            <p>
+                                <input id="Fnombre" data-bind="value: nombre" class="k-textbox" placeholder="Nombre del curso" />
+                                <input id="Farea" data-bind="value: area" class="k-textbox" placeholder="Area" />
+                            </p>
+                            <br /><br />
+
+                            <div id="Modulos">
+                                <div id="Modulo 1">
+                                    <ol id="lista2">
+                                        <li>
+                                            <label>Modulo 1 </label><a href="#" onclick="AgregarModulos();">Agregar Modulo </a>
+                                            <ol>
+                                                <li>
+                                                    <label>Unidad 1 </label><a href="#" onclick="AgregarUnidad();">Agregar Unidad </a>
+                                                    <ol>
+                                                        <li>
+                                                            <label>Leccion 1 </label><a href="#" onclick="AgregarLeccion();">Agregar Leccion </a><br /><br />
+                                                            <input id="FLeccion" data-bind="value: leccion" class="k-textbox" placeholder="Nombre de la Leccion" />
+                                                            <button id="Button1">Button</button>
+                                                            <button id="Button2">Button</button>
+                                                            <button id="Button3">Button</button>
+                                                        </li>
+                                                    </ol>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <p>
+                                <button id="Btnsubmit" data-bind="click: register">Registrar</button>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+                <!--<div>
+                    <pre>
+                        {
+                            Nombre: <span data-bind="text: nombre"></span>
+                            Area: <span data-bind="text: area"></span>
+                        }
+                    </pre>
+                </div>-->
+                <div data-bind="visible: confirmed">
+                    <span data-bind="text: nombre"></span>
+                    <br /><br />
+                    <button data-bind="click: startOver" class="k-button k-primary">Start Over</button>
+                </div>
+                <script>
+                    var nextinput = 1;
+
+                    function AgregarModulos() {
+                        nextinput++;
+                        campo = '<div id="Modulo ' + nextinput + '&nbsp;"><ol id="lista2"><li><label>Modulo ' + nextinput + '&nbsp;</label><a href="#" onclick="AgregarModulos();">Agregar Modulo </a><ol><li><label>Unidad 1 </label><a href="#" onclick="AgregarUnidad();">Agregar Unidad </a><ol><li><label>Leccion 1 </label><a href="#" onclick="AgregarLeccion();">Agregar Leccion </a><br /><br /><input id="FLeccion" data-bind="value: leccion" class="k-textbox" placeholder="Nombre de la Leccion" /><button id="Button1">Button</button><button id="Button2">Button</button><button id="Button3">Button</button></li></ol></li></ol></li></ol></div>';
+                        $("#Modulos").append(campo);
+                    }
+
+                    /*var unidades = 1;
+
+                    function AgregarUnidad() {
+                        unidades++;
+                        campo = '<div id="Unidad ' + unidades + '&nbsp;"><label>Unidad ' + unidades + '&nbsp; </label><a href="#" onclick="AgregarUnidad();">Agregar Unidad </a><br /></div>';
+                        $("#Unidades").append(campo);
+                    }*/
+
+                    $(document).ready(function() {
+                        var viewModel = kendo.observable({
+                            nombre: "",
+                            area: "",
+                            confirmed: false,
+                            register: function(e) {
+                                e.preventDefault();
+
+                                /*var modu = $("#Fmodulos").val();
+
+                                alert("Hola: " + modu);*/
+
+                                this.set("confirmed", true);
+                            },
+                            startOver: function() {
+                                this.set("confirmed", false);
+                                this.set("area", "");
+                                this.set("nombre", "");
+                            }
+                        });
+
+                        kendo.bind($("#example"), viewModel);
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

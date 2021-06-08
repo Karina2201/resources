@@ -1,0 +1,122 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 144, 211);
+}
+
+#container {
+    max-width: 90%;
+    max-height: fit-content;
+    margin: auto;
+}
+
+#Titulo {
+    text-align: center;
+}
+
+
+/*#FormEleccion {
+    background-color: brown;
+}*/
+
+#Fnombre {
+    width: 40%;
+}
+
+#Farea {
+    width: 20%;
+}
+
+#Formulario p {
+    text-align: center;
+}
+
+#Modulos {
+    margin-left: 20%;
+}
+
+
+/*Lista*/
+
+#lista2 {
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+#lista2 ol {
+    margin: 0 0 0 2em;
+}
+
+#lista2 li {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 5em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: rgba(255, 255, 255, 0.192);
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;
+}
+
+#lista2 li:hover {
+    background: rgba(135, 207, 235, 0.212);
+}
+
+#lista2 li:hover:before {
+    transform: rotate(360deg);
+}
+
+#lista2 li:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: rgb(135, 206, 235);
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+
+
+/*Botones*/
+
+#Button1,
+#Button2,
+#Button3 {
+    color: rgb(68, 68, 68);
+    border-radius: 40px;
+    width: 10%;
+    background-color: rgb(135, 206, 235);
+    border: 2px solid rgb(255, 255, 255);
+    transition-duration: 0.4s;
+}
+
+#Button1:hover,
+#Button2:hover,
+#Button3:hover {
+    background-color: rgb(135, 206, 235);
+    color: white;
+}
+
+#Btnsubmit {
+    color: rgb(68, 68, 68);
+    border-radius: 8px;
+    width: 10%;
+    background-color: rgb(135, 206, 235);
+    border: 2px solid rgb(255, 255, 255);
+    transition-duration: 0.4s;
+}
