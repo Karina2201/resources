@@ -67,10 +67,13 @@ body {
     margin-right: 25px;
     margin-bottom: 15px;
 }
-
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
 #Button1 {
     border: 2px solid rgb(208, 255, 0);
     transition-duration: 0.4s;
+    text-decoration: none;
 }
 
 #Button1:hover {
@@ -125,5 +128,61 @@ body {
 
 #Button6:hover {
     background-color: rgb(255, 145, 0);
+    color: white;
+}
+
+#Button7 {
+    border: 2px solid #a0d995;
+    transition-duration: 0.4s;
+}
+
+#Button7:hover {
+    background-color: #a0d995;
+    color: white;
+}
+
+#Button8 {
+    border: 2px solid #fdfd96;
+    transition-duration: 0.4s;
+}
+
+#Button8:hover {
+    background-color: #fdfd96;
+    color: white;
+}
+#Button9 {
+    border: 2px solid #ffda89;
+    transition-duration: 0.4s;
+}
+
+#Button9:hover {
+    background-color: #ffda89;
+    color: white;
+}
+#Button10 {
+    border: 2px solid #a68069;
+    transition-duration: 0.4s;
+}
+
+#Button10:hover {
+    background-color: #a68069;
+    color: white;
+}
+#Button11 {
+    border: 2px solid #F39C12;
+    transition-duration: 0.4s;
+}
+
+#Button11:hover {
+    background-color: #F39C12 ;
+    color: white;
+}
+#Button12 {
+    border: 2px solid #1ABC9C ;
+    transition-duration: 0.4s;
+}
+
+#Button12:hover {
+    background-color: #1ABC9C ;
     color: white;
 }
